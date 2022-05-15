@@ -1,0 +1,10 @@
+version: "3.3"
+
+services:
+    cronjob:
+        image: crontest
+        build: .
+        volumes:
+            - ./root:/etc/crontabs/root
+        environment:
+            - TZ=Europe/Rome
